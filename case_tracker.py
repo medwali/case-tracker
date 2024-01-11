@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QPushButton, QWidget
 from PyQt5.QtCore import QTimer
 
-class Stopwatch(QMainWindow):
+class CaseTimer(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -13,7 +13,7 @@ class Stopwatch(QMainWindow):
         self.updateAverageDuration()
 
     def initUI(self):
-        self.setWindowTitle('Case Timer')
+        self.setWindowTitle('Case Tracker')
         self.setGeometry(100, 100, 200, 150)
 
         self.layout = QVBoxLayout()
@@ -105,7 +105,7 @@ class Stopwatch(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
-    ex = Stopwatch()
+    ex = CaseTimer()
     ex.show()
     sys.exit(app.exec_())
 
